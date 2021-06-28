@@ -1,0 +1,114 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_4"
+>
+
+     <View
+         android:id="@+id/SplitLine_hor1"
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:background="#FFFFFF" />
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/SplitLine_hor1"
+         android:layout_marginTop="14dp"
+         android:text="WHITE LIST  :"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textColor="#FFFFFF" />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textView1"
+         android:layout_alignBottom="@+id/textView1"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="17dp"
+         android:text="ADD CONTACT"
+         android:textColor="#FFFFFF" 
+         android:onClick="addContact"/>
+
+     <ListView
+         android:id="@+id/contactsView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/button1"
+         android:layout_marginTop="24dp"
+         android:textColor="#FFFFFF" >
+     </ListView>
+     
+      <View
+         android:id="@+id/SplitLine_hor2"
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:layout_below="@id/contactsView"
+         android:background="#FFFFFF" />
+
+      
+       <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/SplitLine_hor2"
+         android:layout_marginTop="14dp"
+         android:text=" SETTINGS  :"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textColor="#FFFFFF" />
+       
+       <RadioGroup
+     android:id="@+id/rg1"
+     android:layout_width="match_parent"
+     android:lineSpacingMultiplier="1.2"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/textView2"
+     android:orientation="vertical" >
+    
+  <RadioButton
+ android:id="@+id/s1"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="General(Ringing)"
+ android:textColor="#FFFFFF" />
+  
+  <RadioButton
+ android:id="@+id/s2"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="Vibration"
+ android:textColor="#FFFFFF"/>
+  
+  <RadioButton
+         android:id="@+id/s3"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Silence"
+         android:textColor="#FFFFFF"
+         />
+</RadioGroup>
+
+       <Button
+         android:id="@+id/button2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+     
+         android:layout_below="@+id/rg1"
+         android:text="SAVE"
+         android:textColor="#FFFFFF" 
+         android:onClick="getMode"/>
+       
+       
+</RelativeLayout>
